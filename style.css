@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+}
+
+body{
+    background: linear-gradient(#111 ,#222) ;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #ff0000d6;
+    position: absolute;
+    z-index: -1;
+    clip-path: circle(40% at right 70%);
+}
+.container{
+    width: 80%;
+    height: 80%;
+    background-color: #ffffff1a;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+nav .logo{
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: white;
+    text-decoration: none;
+}
+
+nav .logo:hover{
+    border-bottom: white solid 2px;
+}
+
+nav ul{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0 6px;
+}
+
+nav ul li a{
+    text-decoration: none !important;
+    font-size: 25px;
+    color: white;
+    font-weight: 500;
+}
+
+nav ul li a:hover{
+    border-bottom: white solid 2px;
+    color: #ffffffcc;
+}
+
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+
+.text{
+    color: white;
+    width: 40%;
+}
+
+.text h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.text p{
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 25px;
+    margin: 10px 0;
+}
+
+.content .image{
+    width: 40%;
+}
+
+.content .image img{
+    width: 400px;
+}
+
+@media (min-width: 900px) and (max-width:1150px){
+    .content .image img{
+        width: 330px;
+    }
+}
+
+@media (max-width:950px){
+    .content , nav{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .content .image , .content .text{
+        width: 80%;
+    }
+    body::after{
+        clip-path: circle(50% at bottom);
+    }
+}
